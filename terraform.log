@@ -1,0 +1,991 @@
+2021-03-28T10:39:13.081-0600 [DEBUG] Adding temp file log sink: /tmp/terraform-log294613545
+2021-03-28T10:39:13.081-0600 [INFO]  Terraform version: 0.15.0 beta2
+2021-03-28T10:39:13.081-0600 [INFO]  Go runtime version: go1.16.2
+2021-03-28T10:39:13.081-0600 [INFO]  CLI args: []string{"/usr/bin/terraform", "plan"}
+2021-03-28T10:39:13.081-0600 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2021-03-28T10:39:13.081-0600 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021-03-28T10:39:13.081-0600 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021-03-28T10:39:13.081-0600 [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2021-03-28T10:39:13.081-0600 [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2021-03-28T10:39:13.081-0600 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2021-03-28T10:39:13.081-0600 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2021-03-28T10:39:13.081-0600 [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2021-03-28T10:39:13.082-0600 [INFO]  CLI command args: []string{"plan"}
+2021-03-28T10:39:13.086-0600 [DEBUG] New state was assigned lineage "128d18d7-2191-5c98-30d7-bed125c342f3"
+2021-03-28T10:39:14.006-0600 [DEBUG] checking for provisioner in "."
+2021-03-28T10:39:14.010-0600 [DEBUG] checking for provisioner in "/usr/bin"
+2021-03-28T10:39:14.010-0600 [INFO]  Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2021-03-28T10:39:14.010-0600 [INFO]  backend/local: starting Plan operation
+2021-03-28T10:39:14.011-0600 [DEBUG] created provider logger: level=debug
+2021-03-28T10:39:14.011-0600 [INFO]  provider: configuring client automatic mTLS
+2021-03-28T10:39:14.043-0600 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5]
+2021-03-28T10:39:14.043-0600 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 pid=5681
+2021-03-28T10:39:14.043-0600 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5
+2021-03-28T10:39:14.075-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: configuring server automatic mTLS: timestamp=2021-03-28T10:39:14.075-0600
+2021-03-28T10:39:14.110-0600 [DEBUG] provider.terraform-provider-aws_v3.33.0_x5: plugin address: network=unix address=/tmp/plugin241665186 timestamp=2021-03-28T10:39:14.110-0600
+2021-03-28T10:39:14.110-0600 [DEBUG] provider: using plugin: version=5
+2021-03-28T10:39:14.236-0600 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-28T10:39:14.238-0600 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 pid=5681
+2021-03-28T10:39:14.238-0600 [DEBUG] provider: plugin exited
+2021-03-28T10:39:14.238-0600 [INFO]  terraform: building graph: GraphTypeValidate
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_route_table_association.main" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_route_table.default" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_network_acl.allowall" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_instance.winrm" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_eip.webserver" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "data.aws_ami.amazon_windows_2012R2" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_security_group.allowall" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_subnet.main" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_vpc.main" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.239-0600 [DEBUG] ProviderTransformer: "aws_internet_gateway.main" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_route_table.default" references: [aws_vpc.main aws_internet_gateway.main]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_security_group.allowall" references: [aws_vpc.main]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.secret_key" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_network_acl.allowall" references: [aws_vpc.main]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.admin_password" references: []
+2021-03-28T10:39:14.240-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:14.240-0600 [INFO]  ReferenceTransformer: reference not found: "self"
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_instance.winrm" references: [var.instance_count aws_security_group.allowall data.aws_ami.amazon_windows_2012R2 var.aws_availzone var.key_name var.INSTANCE_USERNAME var.INSTANCE_PASSWORD var.INSTANCE_USERNAME var.ARMKEY aws_subnet.main var.private_key_path]
+2021-03-28T10:39:14.240-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_eip.webserver" references: [aws_internet_gateway.main var.instance_count aws_instance.winrm]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.public_key_path" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.private_key_path" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.pbase" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_subnet.main" references: [aws_vpc.main var.aws_availzone]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "data.aws_ami.amazon_windows_2012R2" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.aws_availzone" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_vpc.main" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "aws_internet_gateway.main" references: [aws_vpc.main]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.access_key" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.instance_count" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.access_key var.aws_region var.secret_key]
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.instance_name" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.INSTANCE_USERNAME" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.ptext" references: []
+2021-03-28T10:39:14.240-0600 [DEBUG] ReferenceTransformer: "var.INSTANCE_PASSWORD" references: []
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "output.Admin_Password_rsadecrypted" references: [aws_instance.winrm var.private_key_path]
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "aws_route_table_association.main" references: [aws_route_table.default aws_subnet.main]
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "output.Admin_Username" references: []
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "output.Admin_Password" references: [aws_instance.winrm]
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "var.ARMKEY" references: []
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "var.key_name" references: []
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2021-03-28T10:39:14.241-0600 [DEBUG] ReferenceTransformer: "output.IPAddress-InstanceName" references: [aws_eip.webserver aws_instance.winrm]
+2021-03-28T10:39:14.242-0600 [DEBUG] Starting graph walk: walkValidate
+2021-03-28T10:39:14.242-0600 [DEBUG] created provider logger: level=debug
+2021-03-28T10:39:14.243-0600 [INFO]  provider: configuring client automatic mTLS
+2021-03-28T10:39:14.272-0600 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5]
+2021-03-28T10:39:14.273-0600 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 pid=5688
+2021-03-28T10:39:14.273-0600 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5
+2021-03-28T10:39:14.309-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: configuring server automatic mTLS: timestamp=2021-03-28T10:39:14.309-0600
+2021-03-28T10:39:14.344-0600 [DEBUG] provider: using plugin: version=5
+2021-03-28T10:39:14.344-0600 [DEBUG] provider.terraform-provider-aws_v3.33.0_x5: plugin address: address=/tmp/plugin183959286 network=unix timestamp=2021-03-28T10:39:14.344-0600
+2021-03-28T10:39:14.540-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:14.540-0600
+2021-03-28T10:39:14.540-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:14.540-0600
+2021-03-28T10:39:14.540-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:14.540-0600
+2021-03-28T10:39:14.545-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:14.545-0600
+2021-03-28T10:39:14.545-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:14.545-0600
+2021-03-28T10:39:14.547-0600 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-28T10:39:14.549-0600 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 pid=5688
+2021-03-28T10:39:14.549-0600 [DEBUG] provider: plugin exited
+2021-03-28T10:39:14.549-0600 [INFO]  backend/local: plan calling Plan
+2021-03-28T10:39:14.549-0600 [INFO]  terraform: building graph: GraphTypePlan
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_route_table.default (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_instance.winrm (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_vpc.main (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_route_table_association.main (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_subnet.main (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_security_group.allowall (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_network_acl.allowall (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_eip.webserver (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "data.aws_ami.amazon_windows_2012R2 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ProviderTransformer: "aws_internet_gateway.main (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_vpc.main (expand)" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_route_table_association.main (expand)" references: [aws_subnet.main (expand) aws_route_table.default (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "output.Admin_Password" references: [aws_instance.winrm (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_security_group.allowall (expand)" references: [aws_vpc.main (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.secret_key" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.INSTANCE_USERNAME" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.ptext" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_network_acl.allowall (expand)" references: [aws_vpc.main (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.access_key" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "output.Admin_Username" references: []
+2021-03-28T10:39:14.550-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_eip.webserver (expand)" references: [aws_internet_gateway.main (expand) var.instance_count aws_instance.winrm (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "data.aws_ami.amazon_windows_2012R2 (expand)" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.private_key_path" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.pbase" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.INSTANCE_PASSWORD" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.key_name" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_internet_gateway.main (expand)" references: [aws_vpc.main (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.instance_count" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "output.IPAddress-InstanceName" references: [aws_eip.webserver (expand) aws_instance.winrm (expand)]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "output.Admin_Password_rsadecrypted" references: [aws_instance.winrm (expand) var.private_key_path]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.secret_key var.access_key var.aws_region]
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.instance_name" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.ARMKEY" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "var.admin_password" references: []
+2021-03-28T10:39:14.550-0600 [DEBUG] ReferenceTransformer: "aws_route_table.default (expand)" references: [aws_vpc.main (expand) aws_internet_gateway.main (expand)]
+2021-03-28T10:39:14.551-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:14.551-0600 [INFO]  ReferenceTransformer: reference not found: "self"
+2021-03-28T10:39:14.551-0600 [DEBUG] ReferenceTransformer: "aws_instance.winrm (expand)" references: [var.instance_count aws_security_group.allowall (expand) var.INSTANCE_USERNAME var.INSTANCE_PASSWORD var.INSTANCE_USERNAME var.ARMKEY var.aws_availzone aws_subnet.main (expand) var.key_name data.aws_ami.amazon_windows_2012R2 (expand) var.private_key_path]
+2021-03-28T10:39:14.551-0600 [DEBUG] ReferenceTransformer: "aws_subnet.main (expand)" references: [aws_vpc.main (expand) var.aws_availzone]
+2021-03-28T10:39:14.551-0600 [DEBUG] ReferenceTransformer: "var.aws_region" references: []
+2021-03-28T10:39:14.551-0600 [DEBUG] ReferenceTransformer: "var.aws_availzone" references: []
+2021-03-28T10:39:14.551-0600 [DEBUG] ReferenceTransformer: "var.public_key_path" references: []
+2021-03-28T10:39:14.552-0600 [DEBUG] Starting graph walk: walkPlan
+2021-03-28T10:39:14.552-0600 [DEBUG] created provider logger: level=debug
+2021-03-28T10:39:14.552-0600 [INFO]  provider: configuring client automatic mTLS
+2021-03-28T10:39:14.582-0600 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5]
+2021-03-28T10:39:14.583-0600 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 pid=5695
+2021-03-28T10:39:14.583-0600 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5
+2021-03-28T10:39:14.615-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: configuring server automatic mTLS: timestamp=2021-03-28T10:39:14.615-0600
+2021-03-28T10:39:14.651-0600 [DEBUG] provider.terraform-provider-aws_v3.33.0_x5: plugin address: network=unix address=/tmp/plugin510012247 timestamp=2021-03-28T10:39:14.651-0600
+2021-03-28T10:39:14.651-0600 [DEBUG] provider: using plugin: version=5
+2021-03-28T10:39:14.841-0600 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/aws\"]" changed the config value, but that value is unused
+2021-03-28T10:39:14.843-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [INFO] AWS Auth provider used: "StaticProvider": timestamp=2021-03-28T10:39:14.842-0600
+2021-03-28T10:39:14.843-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [DEBUG] Trying to get account information via sts:GetCallerIdentity: timestamp=2021-03-28T10:39:14.842-0600
+2021-03-28T10:39:14.843-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:14 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: sts.amazonaws.com
+User-Agent: aws-sdk-go/1.37.24 (go1.16; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.15.0-beta2 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws)
+Content-Length: 43
+Authorization: AWS4-HMAC-SHA256 Credential=AKIAW5DLSGA623ND3W5S/20210328/us-east-1/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=95db7cc7c96484f04027b8640f52934b0048fbca557080de787fe7560c6eef5d
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210328T163914Z
+Accept-Encoding: gzip
+
+Action=GetCallerIdentity&Version=2011-06-15
+-----------------------------------------------------: timestamp=2021-03-28T10:39:14.842-0600
+2021-03-28T10:39:15.090-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 404
+Content-Type: text/xml
+Date: Sun, 28 Mar 2021 16:39:14 GMT
+X-Amzn-Requestid: 53a0a4ff-c948-4dd2-a9dd-23d23231f256
+
+
+-----------------------------------------------------: timestamp=2021-03-28T10:39:15.090-0600
+2021-03-28T10:39:15.090-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  <GetCallerIdentityResult>
+    <Arn>arn:aws:iam::474819473469:user/cellrod</Arn>
+    <UserId>AIDAW5DLSGA6QLOTVVN2N</UserId>
+    <Account>474819473469</Account>
+  </GetCallerIdentityResult>
+  <ResponseMetadata>
+    <RequestId>53a0a4ff-c948-4dd2-a9dd-23d23231f256</RequestId>
+  </ResponseMetadata>
+</GetCallerIdentityResponse>: timestamp=2021-03-28T10:39:15.090-0600
+2021-03-28T10:39:15.090-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] Trying to get account information via sts:GetCallerIdentity: timestamp=2021-03-28T10:39:15.090-0600
+2021-03-28T10:39:15.090-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: sts.amazonaws.com
+User-Agent: aws-sdk-go/1.37.24 (go1.16; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.15.0-beta2 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws)
+Content-Length: 43
+Authorization: AWS4-HMAC-SHA256 Credential=AKIAW5DLSGA623ND3W5S/20210328/us-east-1/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=4c9f0c044d6258b310bba0fc9290504575b52026b33d7a924452db67871f6920
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210328T163915Z
+Accept-Encoding: gzip
+
+Action=GetCallerIdentity&Version=2011-06-15
+-----------------------------------------------------: timestamp=2021-03-28T10:39:15.090-0600
+2021-03-28T10:39:15.296-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 404
+Content-Type: text/xml
+Date: Sun, 28 Mar 2021 16:39:14 GMT
+X-Amzn-Requestid: 4903a4c3-27b5-4c91-a6e4-dfd763d19301
+
+
+-----------------------------------------------------: timestamp=2021-03-28T10:39:15.296-0600
+2021-03-28T10:39:15.296-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  <GetCallerIdentityResult>
+    <Arn>arn:aws:iam::474819473469:user/cellrod</Arn>
+    <UserId>AIDAW5DLSGA6QLOTVVN2N</UserId>
+    <Account>474819473469</Account>
+  </GetCallerIdentityResult>
+  <ResponseMetadata>
+    <RequestId>4903a4c3-27b5-4c91-a6e4-dfd763d19301</RequestId>
+  </ResponseMetadata>
+</GetCallerIdentityResponse>: timestamp=2021-03-28T10:39:15.296-0600
+2021-03-28T10:39:15.300-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeAccountAttributes Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.us-east-1.amazonaws.com
+User-Agent: aws-sdk-go/1.37.24 (go1.16; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.15.0-beta2 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws)
+Content-Length: 87
+Authorization: AWS4-HMAC-SHA256 Credential=AKIAW5DLSGA623ND3W5S/20210328/us-east-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=9cf07ca74ce5ca6e17275493042ad834ad8de864cf83bd87e9f043bffecf6dd1
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210328T163915Z
+Accept-Encoding: gzip
+
+Action=DescribeAccountAttributes&AttributeName.1=supported-platforms&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-03-28T10:39:15.300-0600
+2021-03-28T10:39:15.565-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeAccountAttributes Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 540
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Sun, 28 Mar 2021 16:39:14 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Amzn-Requestid: 7d3f41a1-d3f1-4c8f-a3b3-70ca4f5cc0dc
+
+
+-----------------------------------------------------: timestamp=2021-03-28T10:39:15.565-0600
+2021-03-28T10:39:15.565-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeAccountAttributesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>7d3f41a1-d3f1-4c8f-a3b3-70ca4f5cc0dc</requestId>
+    <accountAttributeSet>
+        <item>
+            <attributeName>supported-platforms</attributeName>
+            <attributeValueSet>
+                <item>
+                    <attributeValue>VPC</attributeValue>
+                </item>
+            </attributeValueSet>
+        </item>
+    </accountAttributeSet>
+</DescribeAccountAttributesResponse>: timestamp=2021-03-28T10:39:15.565-0600
+2021-03-28T10:39:15.566-0600 [DEBUG] Resource instance state not found for node "aws_vpc.main", instance aws_vpc.main
+2021-03-28T10:39:15.566-0600 [DEBUG] ReferenceTransformer: "aws_vpc.main" references: []
+2021-03-28T10:39:15.566-0600 [DEBUG] refresh: aws_vpc.main: no state, so not refreshing
+2021-03-28T10:39:15.566-0600 [DEBUG] Resource instance state not found for node "data.aws_ami.amazon_windows_2012R2", instance data.aws_ami.amazon_windows_2012R2
+2021-03-28T10:39:15.567-0600 [DEBUG] ReferenceTransformer: "data.aws_ami.amazon_windows_2012R2" references: []
+2021-03-28T10:39:15.568-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:15.568-0600
+2021-03-28T10:39:15.569-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] Reading AMI: {
+  Filters: [{
+      Name: "name",
+      Values: ["Windows_Server-2012-R2_RTM-English-64Bit-Base-*"]
+    }],
+  Owners: ["amazon"]
+}: timestamp=2021-03-28T10:39:15.569-0600
+2021-03-28T10:39:15.570-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.main, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+2021-03-28T10:39:15.570-0600 [DEBUG] Resource instance state not found for node "aws_internet_gateway.main", instance aws_internet_gateway.main
+2021-03-28T10:39:15.570-0600 [DEBUG] ReferenceTransformer: "aws_internet_gateway.main" references: []
+2021-03-28T10:39:15.570-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeImages Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+POST / HTTP/1.1
+Host: ec2.us-east-1.amazonaws.com
+User-Agent: aws-sdk-go/1.37.24 (go1.16; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.15.0-beta2 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws)
+Content-Length: 141
+Authorization: AWS4-HMAC-SHA256 Credential=AKIAW5DLSGA623ND3W5S/20210328/us-east-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=74289e53b7c6f3d0834696c1903b82ba548de9db4f3830d1130c8422de113c50
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+X-Amz-Date: 20210328T163915Z
+Accept-Encoding: gzip
+
+Action=DescribeImages&Filter.1.Name=name&Filter.1.Value.1=Windows_Server-2012-R2_RTM-English-64Bit-Base-%2A&Owner.1=amazon&Version=2016-11-15
+-----------------------------------------------------: timestamp=2021-03-28T10:39:15.569-0600
+2021-03-28T10:39:15.570-0600 [DEBUG] Resource instance state not found for node "aws_security_group.allowall", instance aws_security_group.allowall
+2021-03-28T10:39:15.570-0600 [DEBUG] ReferenceTransformer: "aws_security_group.allowall" references: []
+2021-03-28T10:39:15.571-0600 [DEBUG] refresh: aws_internet_gateway.main: no state, so not refreshing
+2021-03-28T10:39:15.571-0600 [DEBUG] Resource instance state not found for node "aws_subnet.main", instance aws_subnet.main
+2021-03-28T10:39:15.571-0600 [INFO]  ReferenceTransformer: reference not found: "var.aws_availzone"
+2021-03-28T10:39:15.571-0600 [DEBUG] ReferenceTransformer: "aws_subnet.main" references: []
+2021-03-28T10:39:15.572-0600 [DEBUG] refresh: aws_subnet.main: no state, so not refreshing
+2021-03-28T10:39:15.572-0600 [DEBUG] refresh: aws_security_group.allowall: no state, so not refreshing
+2021-03-28T10:39:15.572-0600 [DEBUG] Resource instance state not found for node "aws_network_acl.allowall", instance aws_network_acl.allowall
+2021-03-28T10:39:15.572-0600 [DEBUG] ReferenceTransformer: "aws_network_acl.allowall" references: []
+2021-03-28T10:39:15.573-0600 [DEBUG] refresh: aws_network_acl.allowall: no state, so not refreshing
+2021-03-28T10:39:15.574-0600 [DEBUG] Resource instance state not found for node "aws_route_table.default", instance aws_route_table.default
+2021-03-28T10:39:15.574-0600 [DEBUG] ReferenceTransformer: "aws_route_table.default" references: []
+2021-03-28T10:39:15.574-0600 [DEBUG] refresh: aws_route_table.default: no state, so not refreshing
+2021-03-28T10:39:15.575-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:15.575-0600
+2021-03-28T10:39:15.575-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:15.575-0600
+2021-03-28T10:39:15.576-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.main, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .map_public_ip_on_launch: planned value cty.False for a non-computed attribute
+2021-03-28T10:39:15.578-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_route_table.default, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .route: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_block":cty.StringVal("0.0.0.0/0"), "egress_only_gateway_id":cty.StringVal(""), "gateway_id":cty.UnknownVal(cty.String), "instance_id":cty.StringVal(""), "ipv6_cidr_block":cty.StringVal(""), "local_gateway_id":cty.StringVal(""), "nat_gateway_id":cty.StringVal(""), "network_interface_id":cty.StringVal(""), "transit_gateway_id":cty.StringVal(""), "vpc_endpoint_id":cty.StringVal(""), "vpc_peering_connection_id":cty.StringVal("")})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_block":cty.StringVal("0.0.0.0/0"), "egress_only_gateway_id":cty.NullVal(cty.String), "gateway_id":cty.UnknownVal(cty.String), "instance_id":cty.NullVal(cty.String), "ipv6_cidr_block":cty.NullVal(cty.String), "local_gateway_id":cty.NullVal(cty.String), "nat_gateway_id":cty.NullVal(cty.String), "network_interface_id":cty.NullVal(cty.String), "transit_gateway_id":cty.NullVal(cty.String), "vpc_endpoint_id":cty.NullVal(cty.String), "vpc_peering_connection_id":cty.NullVal(cty.String)})})
+2021-03-28T10:39:15.578-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_network_acl.allowall, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"action":cty.StringVal("allow"), "cidr_block":cty.StringVal("0.0.0.0/0"), "from_port":cty.NumberIntVal(0), "icmp_code":cty.NullVal(cty.Number), "icmp_type":cty.NullVal(cty.Number), "ipv6_cidr_block":cty.StringVal(""), "protocol":cty.StringVal("-1"), "rule_no":cty.NumberIntVal(100), "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"action":cty.StringVal("allow"), "cidr_block":cty.StringVal("0.0.0.0/0"), "from_port":cty.NumberIntVal(0), "icmp_code":cty.NullVal(cty.Number), "icmp_type":cty.NullVal(cty.Number), "ipv6_cidr_block":cty.NullVal(cty.String), "protocol":cty.StringVal("-1"), "rule_no":cty.NumberIntVal(100), "to_port":cty.NumberIntVal(0)})})
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"action":cty.StringVal("allow"), "cidr_block":cty.StringVal("0.0.0.0/0"), "from_port":cty.NumberIntVal(0), "icmp_code":cty.NullVal(cty.Number), "icmp_type":cty.NullVal(cty.Number), "ipv6_cidr_block":cty.StringVal(""), "protocol":cty.StringVal("-1"), "rule_no":cty.NumberIntVal(200), "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"action":cty.StringVal("allow"), "cidr_block":cty.StringVal("0.0.0.0/0"), "from_port":cty.NumberIntVal(0), "icmp_code":cty.NullVal(cty.Number), "icmp_type":cty.NullVal(cty.Number), "ipv6_cidr_block":cty.NullVal(cty.String), "protocol":cty.StringVal("-1"), "rule_no":cty.NumberIntVal(200), "to_port":cty.NumberIntVal(0)})})
+2021-03-28T10:39:15.578-0600 [DEBUG] Resource instance state not found for node "aws_route_table_association.main", instance aws_route_table_association.main
+2021-03-28T10:39:15.578-0600 [DEBUG] ReferenceTransformer: "aws_route_table_association.main" references: []
+2021-03-28T10:39:15.578-0600 [DEBUG] refresh: aws_route_table_association.main: no state, so not refreshing
+2021-03-28T10:39:15.582-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:15.582-0600
+2021-03-28T10:39:15.582-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:15 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-03-28T10:39:15.582-0600
+2021-03-28T10:39:15.600-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.allowall, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(-1), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("icmp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(-1)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(18800), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(18800)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(1880), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(1880)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(22)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(3389), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(3389)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(4119), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(4119)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(4120), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(4120)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(4122), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(4122)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5140), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5140)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5141), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5141)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5400), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5600)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5443), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5516), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5516)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5985), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5985)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(5986), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(5986)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(80)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(8443), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(8443)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(-1), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("icmp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(-1)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(18800), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(18800)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(1880), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(1880)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(22)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(3389), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(3389)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(4119), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(4119)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(4120), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(4120)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(4122), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(4122)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5140), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5140)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5141), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5141)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5400), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5600)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5443), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5516), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5516)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5985), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5985)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(5986), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(5986)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(80)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(8443), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(8443)})})
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})})
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeImages Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store
+Content-Type: text/xml;charset=UTF-8
+Date: Sun, 28 Mar 2021 16:39:16 GMT
+Server: AmazonEC2
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: accept-encoding
+X-Amzn-Requestid: 812747da-8a07-45a4-9d32-0e6d2f853514
+
+
+-----------------------------------------------------: timestamp=2021-03-28T10:39:17.131-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+<DescribeImagesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>812747da-8a07-45a4-9d32-0e6d2f853514</requestId>
+    <imagesSet>
+        <item>
+            <imageId>ami-0093d2a4365944361</imageId>
+            <imageLocation>amazon/Windows_Server-2012-R2_RTM-English-64Bit-Base-2020.12.09</imageLocation>
+            <imageState>available</imageState>
+            <imageOwnerId>801119661308</imageOwnerId>
+            <creationDate>2020-12-11T07:15:48.000Z</creationDate>
+            <isPublic>true</isPublic>
+            <architecture>x86_64</architecture>
+            <imageType>machine</imageType>
+            <platform>windows</platform>
+            <sriovNetSupport>simple</sriovNetSupport>
+            <imageOwnerAlias>amazon</imageOwnerAlias>
+            <name>Windows_Server-2012-R2_RTM-English-64Bit-Base-2020.12.09</name>
+            <description>Microsoft Windows Server 2012 R2 RTM 64-bit Locale English AMI provided by Amazon</description>
+            <rootDeviceType>ebs</rootDeviceType>
+            <rootDeviceName>/dev/sda1</rootDeviceName>
+            <blockDeviceMapping>
+                <item>
+                    <deviceName>/dev/sda1</deviceName>
+                    <ebs>
+                        <snapshotId>snap-03807e2ccb866efe5</snapshotId>
+                        <volumeSize>30</volumeSize>
+                        <deleteOnTermination>true</deleteOnTermination>
+                        <volumeType>gp2</volumeType>
+                        <encrypted>false</encrypted>
+                    </ebs>
+                </item>
+                <item>
+                    <deviceName>xvdca</deviceName>
+                    <virtualName>ephemeral0</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcb</deviceName>
+                    <virtualName>ephemeral1</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcc</deviceName>
+                    <virtualName>ephemeral2</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcd</deviceName>
+                    <virtualName>ephemeral3</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdce</deviceName>
+                    <virtualName>ephemeral4</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcf</deviceName>
+                    <virtualName>ephemeral5</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcg</deviceName>
+                    <virtualName>ephemeral6</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdch</deviceName>
+                    <virtualName>ephemeral7</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdci</deviceName>
+                    <virtualName>ephemeral8</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcj</deviceName>
+                    <virtualName>ephemeral9</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdck</deviceName>
+                    <virtualName>ephemeral10</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcl</deviceName>
+                    <virtualName>ephemeral11</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcm</deviceName>
+                    <virtualName>ephemeral12</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcn</deviceName>
+                    <virtualName>ephemeral13</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdco</deviceName>
+                    <virtualName>ephemeral14</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcp</deviceName>
+                    <virtualName>ephemeral15</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcq</deviceName>
+                    <virtualName>ephemeral16</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcr</deviceName>
+                    <virtualName>ephemeral17</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcs</deviceName>
+                    <virtualName>ephemeral18</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdct</deviceName>
+                    <virtualName>ephemeral19</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcu</deviceName>
+                    <virtualName>ephemeral20</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcv</deviceName>
+                    <virtualName>ephemeral21</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcw</deviceName>
+                    <virtualName>ephemeral22</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcx</deviceName>
+                    <virtualName>ephemeral23</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcy</deviceName>
+                    <virtualName>ephemeral24</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcz</deviceName>
+                    <virtualName>ephemeral25</virtualName>
+                </item>
+            </blockDeviceMapping>
+            <virtualizationType>hvm</virtualizationType>
+            <hypervisor>xen</hypervisor>
+            <enaSupport>true</enaSupport>
+            <platformDetails>Windows</platformDetails>
+            <usageOperation>RunInstances:0002</usageOperation>
+        </item>
+        <item>
+            <imageId>ami-00f7f6b1de71daaee</imageId>
+            <imageLocation>amazon/Windows_Server-2012-R2_RTM-English-64Bit-Base-2021.02.10</imageLocation>
+            <imageState>available</imageState>
+            <imageOwnerId>801119661308</imageOwnerId>
+            <creationDate>2021-02-10T04:04:26.000Z</creationDate>
+            <isPublic>true</isPublic>
+            <architecture>x86_64</architecture>
+            <imageType>machine</imageType>
+            <platform>windows</platform>
+            <sriovNetSupport>simple</sriovNetSupport>
+            <imageOwnerAlias>amazon</imageOwnerAlias>
+            <name>Windows_Server-2012-R2_RTM-English-64Bit-Base-2021.02.10</name>
+            <description>Microsoft Windows Server 2012 R2 RTM 64-bit Locale English AMI provided by Amazon</description>
+            <rootDeviceType>ebs</rootDeviceType>
+            <rootDeviceName>/dev/sda1</rootDeviceName>
+            <blockDeviceMapping>
+                <item>
+                    <deviceName>/dev/sda1</deviceName>
+                    <ebs>
+                        <snapshotId>snap-0b0a76e405025d140</snapshotId>
+                        <volumeSize>30</volumeSize>
+                        <deleteOnTermination>true</deleteOnTermination>
+                        <volumeType>gp2</volumeType>
+                        <encrypted>false</encrypted>
+                    </ebs>
+                </item>
+                <item>
+                    <deviceName>xvdca</deviceName>
+                    <virtualName>ephemeral0</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcb</deviceName>
+                    <virtualName>ephemeral1</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcc</deviceName>
+                    <virtualName>ephemeral2</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcd</deviceName>
+                    <virtualName>ephemeral3</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdce</deviceName>
+                    <virtualName>ephemeral4</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcf</deviceName>
+                    <virtualName>ephemeral5</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcg</deviceName>
+                    <virtualName>ephemeral6</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdch</deviceName>
+                    <virtualName>ephemeral7</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdci</deviceName>
+                    <virtualName>ephemeral8</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcj</deviceName>
+                    <virtualName>ephemeral9</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdck</deviceName>
+                    <virtualName>ephemeral10</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcl</deviceName>
+                    <virtualName>ephemeral11</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcm</deviceName>
+                    <virtualName>ephemeral12</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcn</deviceName>
+                    <virtualName>ephemeral13</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdco</deviceName>
+                    <virtualName>ephemeral14</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcp</deviceName>
+                    <virtualName>ephemeral15</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcq</deviceName>
+                    <virtualName>ephemeral16</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcr</deviceName>
+                    <virtualName>ephemeral17</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcs</deviceName>
+                    <virtualName>ephemeral18</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdct</deviceName>
+                    <virtualName>ephemeral19</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcu</deviceName>
+                    <virtualName>ephemeral20</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcv</deviceName>
+                    <virtualName>ephemeral21</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcw</deviceName>
+                    <virtualName>ephemeral22</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcx</deviceName>
+                    <virtualName>ephemeral23</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcy</deviceName>
+                    <virtualName>ephemeral24</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcz</deviceName>
+                    <virtualName>ephemeral25</virtualName>
+                </item>
+            </blockDeviceMapping>
+            <virtualizationType>hvm</virtualizationType>
+            <hypervisor>xen</hypervisor>
+            <enaSupport>true</enaSupport>
+            <platformDetails>Windows</platformDetails>
+            <usageOperation>RunInstances:0002</usageOperation>
+        </item>
+        <item>
+            <imageId>ami-0382724d79a997027</imageId>
+            <imageLocation>amazon/Windows_Server-2012-R2_RTM-English-64Bit-Base-2021.03.10</imageLocation>
+            <imageState>available</imageState>
+            <imageOwnerId>801119661308</imageOwnerId>
+            <creationDate>2021-03-11T09:47:07.000Z</creationDate>
+            <isPublic>true</isPublic>
+            <architecture>x86_64</architecture>
+            <imageType>machine</imageType>
+            <platform>windows</platform>
+            <sriovNetSupport>simple</sriovNetSupport>
+            <imageOwnerAlias>amazon</imageOwnerAlias>
+            <name>Windows_Server-2012-R2_RTM-English-64Bit-Base-2021.03.10</name>
+            <description>Microsoft Windows Server 2012 R2 RTM 64-bit Locale English AMI provided by Amazon</description>
+            <rootDeviceType>ebs</rootDeviceType>
+            <rootDeviceName>/dev/sda1</rootDeviceName>
+            <blockDeviceMapping>
+                <item>
+                    <deviceName>/dev/sda1</deviceName>
+                    <ebs>
+                        <snapshotId>snap-0373310cb65f23fd9</snapshotId>
+                        <volumeSize>30</volumeSize>
+                        <deleteOnTermination>true</deleteOnTermination>
+                        <volumeType>gp2</volumeType>
+                        <encrypted>false</encrypted>
+                    </ebs>
+                </item>
+                <item>
+                    <deviceName>xvdca</deviceName>
+                    <virtualName>ephemeral0</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcb</deviceName>
+                    <virtualName>ephemeral1</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcc</deviceName>
+                    <virtualName>ephemeral2</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcd</deviceName>
+                    <virtualName>ephemeral3</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdce</deviceName>
+                    <virtualName>ephemeral4</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcf</deviceName>
+                    <virtualName>ephemeral5</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcg</deviceName>
+                    <virtualName>ephemeral6</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdch</deviceName>
+                    <virtualName>ephemeral7</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdci</deviceName>
+                    <virtualName>ephemeral8</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcj</deviceName>
+                    <virtualName>ephemeral9</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdck</deviceName>
+                    <virtualName>ephemeral10</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcl</deviceName>
+                    <virtualName>ephemeral11</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcm</deviceName>
+                    <virtualName>ephemeral12</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcn</deviceName>
+                    <virtualName>ephemeral13</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdco</deviceName>
+                    <virtualName>ephemeral14</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcp</deviceName>
+                    <virtualName>ephemeral15</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcq</deviceName>
+                    <virtualName>ephemeral16</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcr</deviceName>
+                    <virtualName>ephemeral17</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcs</deviceName>
+                    <virtualName>ephemeral18</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdct</deviceName>
+                    <virtualName>ephemeral19</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcu</deviceName>
+                    <virtualName>ephemeral20</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcv</deviceName>
+                    <virtualName>ephemeral21</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcw</deviceName>
+                    <virtualName>ephemeral22</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcx</deviceName>
+                    <virtualName>ephemeral23</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcy</deviceName>
+                    <virtualName>ephemeral24</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcz</deviceName>
+                    <virtualName>ephemeral25</virtualName>
+                </item>
+            </blockDeviceMapping>
+            <virtualizationType>hvm</virtualizationType>
+            <hypervisor>xen</hypervisor>
+            <enaSupport>true</enaSupport>
+            <platformDetails>Windows</platformDetails>
+            <usageOperation>RunInstances:0002</usageOperation>
+        </item>
+        <item>
+            <imageId>ami-079fe16082fb837c5</imageId>
+            <imageLocation>amazon/Windows_Server-2012-R2_RTM-English-64Bit-Base-2021.01.13</imageLocation>
+            <imageState>available</imageState>
+            <imageOwnerId>801119661308</imageOwnerId>
+            <creationDate>2021-01-13T23:35:53.000Z</creationDate>
+            <isPublic>true</isPublic>
+            <architecture>x86_64</architecture>
+            <imageType>machine</imageType>
+            <platform>windows</platform>
+            <sriovNetSupport>simple</sriovNetSupport>
+            <imageOwnerAlias>amazon</imageOwnerAlias>
+            <name>Windows_Server-2012-R2_RTM-English-64Bit-Base-2021.01.13</name>
+            <description>Microsoft Windows Server 2012 R2 RTM 64-bit Locale English AMI provided by Amazon</description>
+            <rootDeviceType>ebs</rootDeviceType>
+            <rootDeviceName>/dev/sda1</rootDeviceName>
+            <blockDeviceMapping>
+                <item>
+                    <deviceName>/dev/sda1</deviceName>
+                    <ebs>
+                        <snapshotId>snap-0d07efa48621f90b7</snapshotId>
+                        <volumeSize>30</volumeSize>
+                        <deleteOnTermination>true</deleteOnTermination>
+                        <volumeType>gp2</volumeType>
+                        <encrypted>false</encrypted>
+                    </ebs>
+                </item>
+                <item>
+                    <deviceName>xvdca</deviceName>
+                    <virtualName>ephemeral0</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcb</deviceName>
+                    <virtualName>ephemeral1</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcc</deviceName>
+                    <virtualName>ephemeral2</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcd</deviceName>
+                    <virtualName>ephemeral3</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdce</deviceName>
+                    <virtualName>ephemeral4</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcf</deviceName>
+                    <virtualName>ephemeral5</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcg</deviceName>
+                    <virtualName>ephemeral6</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdch</deviceName>
+                    <virtualName>ephemeral7</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdci</deviceName>
+                    <virtualName>ephemeral8</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcj</deviceName>
+                    <virtualName>ephemeral9</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdck</deviceName>
+                    <virtualName>ephemeral10</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcl</deviceName>
+                    <virtualName>ephemeral11</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcm</deviceName>
+                    <virtualName>ephemeral12</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcn</deviceName>
+                    <virtualName>ephemeral13</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdco</deviceName>
+                    <virtualName>ephemeral14</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcp</deviceName>
+                    <virtualName>ephemeral15</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcq</deviceName>
+                    <virtualName>ephemeral16</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcr</deviceName>
+                    <virtualName>ephemeral17</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcs</deviceName>
+                    <virtualName>ephemeral18</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdct</deviceName>
+                    <virtualName>ephemeral19</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcu</deviceName>
+                    <virtualName>ephemeral20</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcv</deviceName>
+                    <virtualName>ephemeral21</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcw</deviceName>
+                    <virtualName>ephemeral22</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcx</deviceName>
+                    <virtualName>ephemeral23</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcy</deviceName>
+                    <virtualName>ephemeral24</virtualName>
+                </item>
+                <item>
+                    <deviceName>xvdcz</deviceName>
+                    <virtualName>ephemeral25</virtualName>
+                </item>
+            </blockDeviceMapping>
+            <virtualizationType>hvm</virtualizationType>
+            <hypervisor>xen</hypervisor>
+            <enaSupport>true</enaSupport>
+            <platformDetails>Windows</platformDetails>
+            <usageOperation>RunInstances:0002</usageOperation>
+        </item>
+    </imagesSet>
+</DescribeImagesResponse>: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:/dev/sda1 ebs:map[delete_on_termination:true encrypted:false iops:0 snapshot_id:snap-0373310cb65f23fd9 throughput:0 volume_size:30 volume_type:gp2] virtual_name:]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdca virtual_name:ephemeral0]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcb virtual_name:ephemeral1]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcc virtual_name:ephemeral2]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcd virtual_name:ephemeral3]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.132-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdce virtual_name:ephemeral4]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcf virtual_name:ephemeral5]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcg virtual_name:ephemeral6]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdch virtual_name:ephemeral7]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdci virtual_name:ephemeral8]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcj virtual_name:ephemeral9]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdck virtual_name:ephemeral10]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcl virtual_name:ephemeral11]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcm virtual_name:ephemeral12]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcn virtual_name:ephemeral13]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdco virtual_name:ephemeral14]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcp virtual_name:ephemeral15]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcq virtual_name:ephemeral16]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcr virtual_name:ephemeral17]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcs virtual_name:ephemeral18]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdct virtual_name:ephemeral19]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcu virtual_name:ephemeral20]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcv virtual_name:ephemeral21]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcw virtual_name:ephemeral22]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcx virtual_name:ephemeral23]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcy virtual_name:ephemeral24]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.133-0600 [INFO]  provider.terraform-provider-aws_v3.33.0_x5: 2021/03/28 10:39:17 [DEBUG] aws_ami - adding block device mapping: map[device_name:xvdcz virtual_name:ephemeral25]: timestamp=2021-03-28T10:39:17.132-0600
+2021-03-28T10:39:17.149-0600 [DEBUG] Resource instance state not found for node "aws_instance.winrm[1]", instance aws_instance.winrm[1]
+2021-03-28T10:39:17.149-0600 [DEBUG] Resource instance state not found for node "aws_instance.winrm[0]", instance aws_instance.winrm[0]
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.instance_count"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.INSTANCE_USERNAME"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.INSTANCE_PASSWORD"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.INSTANCE_USERNAME"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.ARMKEY"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.key_name"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.aws_availzone"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "self"
+2021-03-28T10:39:17.149-0600 [INFO]  ReferenceTransformer: reference not found: "var.private_key_path"
+2021-03-28T10:39:17.149-0600 [DEBUG] ReferenceTransformer: "aws_instance.winrm[0]" references: []
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.instance_count"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.key_name"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.INSTANCE_USERNAME"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.INSTANCE_PASSWORD"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.INSTANCE_USERNAME"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.ARMKEY"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.aws_availzone"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "self"
+2021-03-28T10:39:17.150-0600 [INFO]  ReferenceTransformer: reference not found: "var.private_key_path"
+2021-03-28T10:39:17.150-0600 [DEBUG] ReferenceTransformer: "aws_instance.winrm[1]" references: []
+2021-03-28T10:39:17.150-0600 [DEBUG] refresh: aws_instance.winrm[0]: no state, so not refreshing
+2021-03-28T10:39:17.153-0600 [DEBUG] refresh: aws_instance.winrm[1]: no state, so not refreshing
+2021-03-28T10:39:17.158-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.winrm[0], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .user_data: planned value cty.StringVal("a439120bff9e120d29af580571bcaa9bcd4fe151") does not match config value cty.StringVal("\t<powershell>\n\t#Allow All TLS versions \n\t\t[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls, [Net.SecurityProtocolType]::Tls11, [Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Ssl3\n\t\t[Net.ServicePointManager]::SecurityProtocol = \"Tls, Tls11, Tls12, Ssl3\"\n\t#Windows Remoting\n\t\tnet user poop 'PocketRocketJocket1!=' /add /y\n\t\tnet localgroup administrators poop /add\n\t\twinrm quickconfig -q\n\t\twinrm set winrm/config/winrs '@{MaxMemoryPerShellMB=\"300\"}'\n\t\twinrm set winrm/config '@{MaxTimeoutms=\"1800000\"}'\n\t\twinrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\t\twinrm set winrm/config/service/auth '@{Basic=\"true\"}'\n\t\tnetsh advfirewall firewall add rule name=\"WinRM 5985\" protocol=TCP dir=in localport=5985 action=allow\n\t\tnetsh advfirewall firewall add rule name=\"WinRM 5986\" protocol=TCP dir=in localport=5986 action=allow\n\t\tnet stop winrm\n\t\tsc.exe config winrm start=auto\n\t\tnet start winrm\n\n\t#Chrome\n\t\t$LocalTempDir = $env:TEMP; $ChromeInstaller = \"ChromeInstaller.exe\"; (new-object System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe', \"$LocalTempDir\\$ChromeInstaller\"); & \"$LocalTempDir\\$ChromeInstaller\" /silent /install; $Process2Monitor =  \"ChromeInstaller\"; Do { $ProcessesFound = Get-Process | ?{$Process2Monitor -contains $_.Name} | Select-Object -ExpandProperty Name; If ($ProcessesFound) { \"Still running: $($ProcessesFound -join ', ')\" | Write-Host; Start-Sleep -Seconds 2 } else { rm \"$LocalTempDir\\$ChromeInstaller\" -ErrorAction SilentlyContinue -Verbose } } Until (!$ProcessesFound)\n\n\t#IIS\n\t\tInstall-WindowsFeature -name Web-Server -IncludeManagementTools\n\n\t#ssh\n\t\tmkdir c:\\OpenSSH\n\t\tcd c:\\OpenSSH\n\t\tInvoke-WebRequest https://armorscripts.s3.amazonaws.com/sshinstall.ps1 -outfile sshinstall.ps1 \n\t\t.\\sshinstall.ps1\n\n\t#Armor Agent\n\t\tmkdir c:\\armorinstall\n\t\tcd c:\\armorinstall\n\t\tInvoke-WebRequest https://agent.armor.com/latest/armor_agent.ps1 -outfile c:\\armorinstall\\armor_agent.ps1\n\t\tNew-Item -Path . -Name \"armorinstall.ps1\" -ItemType \"file\" -Value \".\\armor_agent.ps1 -license BCDHC-FKWCQ-6J6JP-PBPF4-DWCPM -region us-west-armor -full\"\n\t\t.\\armorinstall.ps1\n\n\t</powershell>\n")
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2021-03-28T10:39:17.160-0600 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.winrm[1], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .user_data: planned value cty.StringVal("a439120bff9e120d29af580571bcaa9bcd4fe151") does not match config value cty.StringVal("\t<powershell>\n\t#Allow All TLS versions \n\t\t[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls, [Net.SecurityProtocolType]::Tls11, [Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Ssl3\n\t\t[Net.ServicePointManager]::SecurityProtocol = \"Tls, Tls11, Tls12, Ssl3\"\n\t#Windows Remoting\n\t\tnet user poop 'PocketRocketJocket1!=' /add /y\n\t\tnet localgroup administrators poop /add\n\t\twinrm quickconfig -q\n\t\twinrm set winrm/config/winrs '@{MaxMemoryPerShellMB=\"300\"}'\n\t\twinrm set winrm/config '@{MaxTimeoutms=\"1800000\"}'\n\t\twinrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\t\twinrm set winrm/config/service/auth '@{Basic=\"true\"}'\n\t\tnetsh advfirewall firewall add rule name=\"WinRM 5985\" protocol=TCP dir=in localport=5985 action=allow\n\t\tnetsh advfirewall firewall add rule name=\"WinRM 5986\" protocol=TCP dir=in localport=5986 action=allow\n\t\tnet stop winrm\n\t\tsc.exe config winrm start=auto\n\t\tnet start winrm\n\n\t#Chrome\n\t\t$LocalTempDir = $env:TEMP; $ChromeInstaller = \"ChromeInstaller.exe\"; (new-object System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe', \"$LocalTempDir\\$ChromeInstaller\"); & \"$LocalTempDir\\$ChromeInstaller\" /silent /install; $Process2Monitor =  \"ChromeInstaller\"; Do { $ProcessesFound = Get-Process | ?{$Process2Monitor -contains $_.Name} | Select-Object -ExpandProperty Name; If ($ProcessesFound) { \"Still running: $($ProcessesFound -join ', ')\" | Write-Host; Start-Sleep -Seconds 2 } else { rm \"$LocalTempDir\\$ChromeInstaller\" -ErrorAction SilentlyContinue -Verbose } } Until (!$ProcessesFound)\n\n\t#IIS\n\t\tInstall-WindowsFeature -name Web-Server -IncludeManagementTools\n\n\t#ssh\n\t\tmkdir c:\\OpenSSH\n\t\tcd c:\\OpenSSH\n\t\tInvoke-WebRequest https://armorscripts.s3.amazonaws.com/sshinstall.ps1 -outfile sshinstall.ps1 \n\t\t.\\sshinstall.ps1\n\n\t#Armor Agent\n\t\tmkdir c:\\armorinstall\n\t\tcd c:\\armorinstall\n\t\tInvoke-WebRequest https://agent.armor.com/latest/armor_agent.ps1 -outfile c:\\armorinstall\\armor_agent.ps1\n\t\tNew-Item -Path . -Name \"armorinstall.ps1\" -ItemType \"file\" -Value \".\\armor_agent.ps1 -license BCDHC-FKWCQ-6J6JP-PBPF4-DWCPM -region us-west-armor -full\"\n\t\t.\\armorinstall.ps1\n\n\t</powershell>\n")
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2021-03-28T10:39:17.161-0600 [DEBUG] Resource instance state not found for node "aws_eip.webserver[0]", instance aws_eip.webserver[0]
+2021-03-28T10:39:17.161-0600 [DEBUG] Resource instance state not found for node "aws_eip.webserver[1]", instance aws_eip.webserver[1]
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "aws_internet_gateway.main"
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "var.instance_count"
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "aws_instance.winrm"
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:17.161-0600 [DEBUG] ReferenceTransformer: "aws_eip.webserver[0]" references: []
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "aws_internet_gateway.main"
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "var.instance_count"
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "aws_instance.winrm"
+2021-03-28T10:39:17.161-0600 [INFO]  ReferenceTransformer: reference not found: "count.index"
+2021-03-28T10:39:17.161-0600 [DEBUG] ReferenceTransformer: "aws_eip.webserver[1]" references: []
+2021-03-28T10:39:17.161-0600 [DEBUG] refresh: aws_eip.webserver[0]: no state, so not refreshing
+2021-03-28T10:39:17.162-0600 [DEBUG] refresh: aws_eip.webserver[1]: no state, so not refreshing
+2021-03-28T10:39:17.165-0600 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-03-28T10:39:17.167-0600 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.33.0/linux_amd64/terraform-provider-aws_v3.33.0_x5 pid=5695
+2021-03-28T10:39:17.167-0600 [DEBUG] provider: plugin exited
+2021-03-28T10:39:17.167-0600 [INFO]  backend/local: plan operation completed
